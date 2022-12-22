@@ -1,14 +1,24 @@
 # Blogging Application
 
+Add Validation
+Search Users by name
+Default Image Setup
+Update Post Should Have Update Image Option as well
+only Admins can Other Delete Admins
+
  ## **REST API SERVICE**
 
 **Blogging REST API** allows **Bloggers / Users** to **Post** their ideas and views with **Images** as **Interactive Blogs** on their profile, **Users** can **View & Search** all the **Blogs & Blog Categories** as per their personal interests & can **Comment** their views on the **Posts**.
   
 API also provides **User, Admin Spring Security & JWT Cookie Token Based Authentication, Validation & Authorization**. 
 
-API also provides **Pagination, Sorting & Searching features**. 
+API also provides **Pagination, Sorting & Searching features**.
 
-The api's primary objective is to provide **Users with both a Simple & User-Friendly Blogging Experience**.
+API also provides **Custom Exception Handling for all Exceptions & Validations**.
+
+API also provides **Custom Request and Response Data Transfer Objects for all HTTP Requests**.
+
+The API's primary objective is to provide **Users with both a Simple & User-Friendly Blogging Experience**.
 
 The application will be used by the **two** categories of users:
 
@@ -46,34 +56,27 @@ The application will be used by the **two** categories of users:
 
 The REST API allows a Customer to **Signup, Signin** & **View, Create Posts and Comment on Blogs**, as well as the Administrator view all features and services provided by the API for better customer support. 
 
-- User / Customer
+- User / Blogger
     -
-    - Signup 
-    - Login & Logout
-    - Update all Personal Details and Address 
-    - Add Bank Account, Update and View all bank details
-    - Top Up Wallet From Bank Account Balance
-    - Transfer Money From Wallet to Bank Account
-    - Transfer Funds to other Customers
-    - Transfer Funds to Beneficiaries
-    - Make Bill Payments
-    - Check Wallet Balance
-    - View all Transactions
-    - View all Bill Payments
-    - Add, Delete and View all Beneficiaries
-    - Delete Customer Account
+    - Signup
+    - Signin & Signout
+    - Update all User Details
+    - View, Create, Update & Delete Posts
+    - View, Create, Update & Delete Categories
+    - Add Comments on the Post
+    - Update Posts Images
+    - Search & Sort Posts 
+    - Search Users by Name
+    - View Posts Based by Custom Pagination
+    - Delete Account
 
 
 - Administrator
     -
-    - Login & Logout
-    - View all registered Customers 
-    - View all Customer details
-    - View all Customer Bank Accounts
-    - View all Customer Beneficiaries
-    - View all Customers Transactions
+    - Signin & Signout
+    - SignUp other Admins 
+    - View all Users, Posts, Categories & Comments
     - Delete Admin from Database
-
 
 
 ## Setting & Installation 
@@ -112,8 +115,9 @@ Admin Login Details For Your Database
 
 ```bash
 Use PostMan software.
-JWT Authentication is Cookie Based Authentication, Make sure your request has embedded cookies.  
-Roles are already set into the database, Fire appropriate requests for Admin and User respectively. 
+JWT Authentication is Cookie Based Authentication, Make sure your request has embedded cookies. 
+Roles are already set into the database, Fire appropriate requests for Admin and User respectively.
+An Admin is also an User.
 Only Users with Admin roles can create other Admins for the database.
 All GET HttpMethods are Public.
 ```
