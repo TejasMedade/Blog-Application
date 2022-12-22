@@ -114,7 +114,8 @@ Admin Login Details For Your Database
 Use PostMan software.
 JWT Authentication is Cookie Based Authentication, Make sure your request has embedded cookies.  
 Roles are already set into the database, Fire appropriate requests for Admin and User respectively. 
-All GET HttpMethods are Public. 
+Only Users with Admin roles can create other Admins for the database.
+All GET HttpMethods are Public.
 ```
 
 
@@ -151,7 +152,7 @@ Swagger-UI
 Swagger Doesn't Support Cookie Based Authorization, Will Try To Implement It Once Swagger Provide Those Features.
 ```
  
- ## ER Diagram
+## ER Diagram
  
 
 
