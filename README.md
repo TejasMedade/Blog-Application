@@ -5,7 +5,7 @@
 
  ## **REST API SERVICE**
 
-**Blogging REST API** allows **Bloggers / Users** to **Post** their ideas and views with **Images** as **Interactive Blogs** on their profile, **Users** can **View & Search** all the **Blogs & Blog Categories** as per their personal interests & can **Comment** their views on the **Posts**.
+**REST API** allows **Bloggers / Users** to **Post** their ideas and views with **Images** as **Interactive Blogs** on their profile, **Users** can **View & Search** all the **Blogs & Blog Categories** as per their personal interests & can **Comment** their views on the **Posts**.
   
 API also provides **User, Admin Spring Security & JWT Cookie Token Based Authentication, Validation & Authorization**. 
 
