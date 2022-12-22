@@ -1,10 +1,5 @@
 # Blogging Application
 
-Add Validation
-Search Users by name
-Default Image Setup
-Update Post Should Have Update Image Option as well
-only Admins can Other Delete Admins
 
  ## **REST API SERVICE**
 
@@ -78,6 +73,13 @@ The REST API allows a Customer to **Signup, Signin** & **View, Create Posts and 
     - View all Users, Posts, Categories & Comments
     - Delete Admin from Database
 
+- In Progress
+    -
+    - Add Validation
+    - Search Users by name
+    - Default Image Setup
+    - Update Post Should Have Update Image Option as well
+    - Only Admins can Other Delete Admins
 
 ## Setting & Installation 
 
