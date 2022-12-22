@@ -1,6 +1,6 @@
 # Blogging Application
 
-![Blogging Application](https://user-images.githubusercontent.com/105907169/209230749-d8b45588-80ed-4486-b39d-fc9d4fbe8be1.jpg)
+![Blogging Application](https://user-images.githubusercontent.com/105907169/209240082-4c5793e1-e72f-4778-bb9f-194bbdc4d3a1.jpg)
 
 
  ## **REST API SERVICE**
