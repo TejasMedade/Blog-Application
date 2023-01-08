@@ -166,7 +166,7 @@ Swagger Doesn't Support Cookie Based Authorization, Will Try To Implement It Onc
 
 
 
-## URL
+## BASE URL
 ```bash
 http://localhost:8088
 ```
