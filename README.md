@@ -21,7 +21,7 @@ The application will be used by the **two** categories of users:
 
 - **Administrator**
 
-- **Customer** 
+- **Blogger / User** 
 
 ## Tech Stack
 
