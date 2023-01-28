@@ -124,5 +124,8 @@ public class AuthController {
 
 		return new ResponseEntity<UserResponseDto>(registeredUser, HttpStatus.CREATED);
 	}
+	
+	
+	
 
 }
