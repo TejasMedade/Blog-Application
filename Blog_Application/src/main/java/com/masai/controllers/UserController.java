@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,6 +67,16 @@ public class UserController {
 
 	}
 
+	@GetMapping("/search/{keyword}")
+	public ResponseEntity<List<UserResponseDto>> searchUserByName(@PathVariable("keyword") String keyword)
+			throws ResourceNotFoundException {
+
+		List<UserResponseDto> searchUserByName = userService.searchUserByName(keyword);
+
+		return new ResponseEntity<List<UserResponseDto>>(searchUserByName, HttpStatus.OK);
+	}
+
+	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
 	@DeleteMapping("/{userId}")
 	public ResponseEntity<ApiResponse> deleteUserById(@PathVariable("userId") Integer userId)
 			throws ResourceNotFoundException {
