@@ -3,6 +3,7 @@
  */
 package com.masai.JWT.security.utils;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.http.Cookie;
@@ -59,11 +60,10 @@ public class JWTUtils {
 
 		String jwt = generateTokenFromUsername(userDetails.getUsername());
 
-		return ResponseCookie.from(jwtCookie, jwt).path("/blog").maxAge(24 * 60 * 60).httpOnly(true).build();
+		return ResponseCookie.from(jwtCookie, jwt).path("/blog").maxAge(1200).httpOnly(true).build();
 	}
 
 	public ResponseCookie getCleanJwtCookie() {
-
 
 		ResponseCookie cookie = ResponseCookie.from(jwtCookie, null).path("/blog").build();
 
@@ -71,7 +71,6 @@ public class JWTUtils {
 	}
 
 	public String getUserNameFromJwtToken(String token) {
-
 
 		return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
 
@@ -99,8 +98,13 @@ public class JWTUtils {
 
 	public String generateTokenFromUsername(String username) {
 
-		return Jwts.builder().setSubject(username).setIssuedAt(new Date())
-				.setExpiration(new Date((new Date()).getTime() + tokenValidity))
+		Calendar calender = Calendar.getInstance();
+
+		long timeInSecs = calender.getTimeInMillis();
+
+		Date date = new Date(timeInSecs + (20 * 60 * 1000));
+
+		return Jwts.builder().setSubject(username).setIssuedAt(new Date()).setExpiration(date)
 				.signWith(SignatureAlgorithm.HS512, secret).compact();
 	}
 }
