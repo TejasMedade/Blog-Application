@@ -22,4 +22,6 @@ public interface FileService {
 
 	InputStream servePostImage(String path, String imageName) throws FileNotFoundException;
 
+	boolean delete(String filename) throws IOException;
+
 }
