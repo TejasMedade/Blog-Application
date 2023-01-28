@@ -39,7 +39,6 @@ public class UserRequestDto {
 	@Pattern(regexp = "^(?=.*\\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\\w\\d\\s:])([^\\s]){6,12}$", message = "{User.password.invalid}")
 	private String password;
 	
-	
 	private String about;
 	
 
