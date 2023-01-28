@@ -22,6 +22,10 @@ The application will be used by the **two** categories of users:
  - The API implements custom exception handling for all exceptions and validations.
  - The API utilizes custom request and response data transfer objects for all HTTP requests.
  - The API's primary objective is to provide a streamlined and user-friendly blogging experience for users.
+ - Built on REST Architecture
+ - Consumable by clients that support HTTP Protocol
+ - Can be integrated with any application that supports REST API
+ - Suitable for a wide range of use cases.
 
 ## Tech Stack
 
