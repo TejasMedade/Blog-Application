@@ -50,4 +50,6 @@ public interface PostService {
 			throws ResourceNotFoundException, IOException, FileTypeNotValidException;
 
 	void serveImageByPostId(Integer postId, HttpServletResponse response) throws IOException, ResourceNotFoundException;
+
+	ApiResponse deleteProductImage(String fileName) throws IOException;
 }
