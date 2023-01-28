@@ -30,4 +30,6 @@ public interface UserService {
 
 	UserResponseDto registerAdmin(UserRequestDto userdto) throws ResourceNotFoundException;
 
+	List<UserResponseDto> searchUserByName(String keyword) throws ResourceNotFoundException;
+
 }
