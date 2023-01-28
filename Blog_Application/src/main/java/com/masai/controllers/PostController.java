@@ -170,4 +170,13 @@ public class PostController {
 
 	}
 
+	// method to delete images
+	@DeleteMapping("/image/{imageName}")
+	public ResponseEntity<ApiResponse> deleteImage(@PathVariable("imageName") String imageName) throws IOException {
+
+		ApiResponse apiResponse = this.postService.deleteProductImage(imageName);
+
+		return new ResponseEntity<ApiResponse>(apiResponse, HttpStatus.GONE);
+	}
+
 }
