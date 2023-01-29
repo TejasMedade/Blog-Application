@@ -9,10 +9,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,6 +28,9 @@ import com.masai.service.FileService;
  */
 @Service
 public class FileServiceImplementation implements FileService {
+
+	@Value("${project.image}")
+	private String path;
 
 	@Override
 	public ImageResponse updatePostImage(String path, MultipartFile multipartFile)
@@ -71,6 +76,15 @@ public class FileServiceImplementation implements FileService {
 		InputStream is = new FileInputStream(fullPath);
 
 		return is;
+	}
+
+	@Override
+	public boolean delete(String filename) throws IOException {
+
+		Path file = Paths.get(path + File.separator + filename);
+
+		return Files.deleteIfExists(file);
+
 	}
 
 }
