@@ -75,17 +75,32 @@ public class PostServiceImplementation implements PostService {
 		Category category = categoryRepo.findById(categoryId)
 				.orElseThrow(() -> new ResourceNotFoundException("Category", "Category Id", categoryId));
 
-		ImageResponse uploadImage = fileService.updatePostImage(path, image);
+		if (image == null) {
 
-		Post post = this.toPost(postRequestDto);
-		post.setDate(LocalDate.now());
-		post.setUser(user);
-		post.setCategory(category);
-		post.setImage(uploadImage.getFileName());
+			Post post = this.toPost(postRequestDto);
+			post.setDate(LocalDate.now());
+			post.setUser(user);
+			post.setCategory(category);
+			post.setImage("default.jpg");
 
-		Post savedPost = this.postRepo.save(post);
+			Post savedPost = this.postRepo.save(post);
 
-		return this.toPostDto(savedPost);
+			return this.toPostDto(savedPost);
+
+		} else {
+
+			ImageResponse uploadImage = fileService.updatePostImage(path, image);
+
+			Post post = this.toPost(postRequestDto);
+			post.setDate(LocalDate.now());
+			post.setUser(user);
+			post.setCategory(category);
+			post.setImage(uploadImage.getFileName());
+
+			Post savedPost = this.postRepo.save(post);
+
+			return this.toPostDto(savedPost);
+		}
 
 	}
 
@@ -101,9 +116,9 @@ public class PostServiceImplementation implements PostService {
 		post.setContentLine2(postRequestDto.getContentLine2());
 		post.setDate(LocalDate.now());
 
-		postRepo.save(post);
+		Post save = postRepo.save(post);
 
-		return this.toPostDto(post);
+		return this.toPostDto(save);
 	}
 
 	@Override
@@ -264,6 +279,20 @@ public class PostServiceImplementation implements PostService {
 		StreamUtils.copy(resource, response.getOutputStream());
 
 	}
+	
+	@Override
+	public ApiResponse deleteProductImage(String fileName) throws IOException {
+
+		boolean delete = this.fileService.delete(fileName);
+
+		if (delete) {
+			return new ApiResponse(LocalDateTime.now(), "Image File Deleted Successfully !", true);
+		} else {
+			return new ApiResponse(LocalDateTime.now(), "Requested Image File Does Not Exist !", false);
+		}
+
+	}
+	
 
 	Post toPost(PostRequestDto postRequestDto) {
 
