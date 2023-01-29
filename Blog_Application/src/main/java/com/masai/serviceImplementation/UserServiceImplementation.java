@@ -115,6 +115,15 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	@Override
+	public List<UserResponseDto> searchUserByName(String keyword) throws ResourceNotFoundException {
+
+		List<User> findByNameContaining = userRepo.findByNameContaining(keyword);
+
+		return findByNameContaining.stream().map(u -> this.toUserDto(u)).collect(Collectors.toList());
+
+	}
+
+	@Override
 	public List<UserResponseDto> getAllUsers() {
 
 		List<User> listOfUsers = userRepo.findAll();
