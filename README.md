@@ -116,12 +116,10 @@ Admin Login Details For Your Database
 **IMPORTANT NOTE**
 
 ```bash
-Use PostMan software.
-JWT Authentication is Cookie Based Authentication, Make sure your request has embedded cookies. 
-Roles are already set into the database, Fire appropriate requests for Admin and User respectively.
-An Admin is also an User.
-Only Users with Admin roles can create other Admins for the database.
-All GET HttpMethods are Public.
+When utilizing the PostMan software, ensure that the request includes embedded cookies as JWT authentication is implemented as a cookie-based authentication mechanism.
+The roles have already been established within the database. Ensure that the appropriate requests are executed for both the Admin and User roles.
+It's important to note that an Admin is also considered as a User. Only Users with Admin privileges have the ability to create additional Admins within the database.
+All GET HTTP methods are publicly accessible.
 ```
 
 
