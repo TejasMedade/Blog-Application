@@ -153,7 +153,7 @@ Run as Spring Boot App !
 ```
 Swagger-UI 
 ```bash
-Swagger Doesn't Support Cookie Based Authorization, Will Try To Implement It Once Swagger Provide Those Features.
+At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
 ```
  
 ## ER Diagram
