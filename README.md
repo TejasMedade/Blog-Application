@@ -154,12 +154,22 @@ Admin Login Details For Your Database
 
 **IMPORTANT NOTE**
 
-```bash
-When utilizing the PostMan software, ensure that the request includes embedded cookies as JWT authentication is implemented as a cookie-based authentication mechanism.
-The roles have already been established within the database. Ensure that the appropriate requests are executed for both the Admin and User roles.
-It's important to note that an Admin is also considered as a User. Only Users with Admin privileges have the ability to create additional Admins within the database.
-All GET HTTP methods are publicly accessible.
-```
+
+
+- At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
+
+
+- When utilizing the PostMan software, ensure that the request includes embedded cookies as JWT authentication is implemented as a cookie-based authentication mechanism.
+
+
+- The roles have already been established within the database. Ensure that the appropriate requests are executed for both the Admin and User roles.
+
+
+- It's important to note that an Admin is also considered as a User. Only Users with Admin privileges have the ability to create additional Admins within the database.
+
+
+- The expiration time limit for JWT tokens is 20 minutes. Subsequently, a new login session is required after the 20-minute duration.
+
 
 
 ## Run Locally
@@ -214,25 +224,25 @@ https://documenter.getpostman.com/view/24342917/2s8ZDbVL15
 ```
 
 
-## Authorization & Authentication Controller 
+## Authorization & Authentication API Reference 
 
 ![Screenshot 2022-12-22 at 04-53-01 Swagger UI](https://user-images.githubusercontent.com/105907169/209022327-180a8d24-6bf8-45e0-90e9-9cda080769ca.png)
 
-## User Controller
+## User API Reference
 
 ![Screenshot 2022-12-22 at 04-54-17 Swagger UI](https://user-images.githubusercontent.com/105907169/209022330-974606a5-8339-4a9b-ba5c-c74e5a9408cc.png)
 
-## Post Controller
+## Post API Reference
 
 ![Screenshot 2022-12-22 at 04-54-05 Swagger UI](https://user-images.githubusercontent.com/105907169/209022334-735db752-6148-4a44-99da-5d0bb4b5a5fe.png)
 
 
-## Category Controller
+## Category API Reference
 
 ![Screenshot 2022-12-22 at 04-53-15 Swagger UI](https://user-images.githubusercontent.com/105907169/209022324-da219775-d39b-4d60-ac38-345ea3604656.png)
 
 
-## Comment Controller
+## Comment API Reference
 
 ![Screenshot 2022-12-22 at 04-53-53 Swagger UI](https://user-images.githubusercontent.com/105907169/209022336-7cac4c01-e9e4-4baa-9d01-cbb984797852.png)
 
