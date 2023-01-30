@@ -213,18 +213,18 @@ At present, Swagger does not support cookie-based authorization. The team will l
 
 
 
-## BASE URL
+## Base Url
 ```bash
 http://localhost:8088
 ```
-## API REFERENCES
 
-Check Out the Below Given Link For Documntation Which Supports All Details with API Requests, Responses, Headers & Request Body. 
+## PostMan Documentation
 
-```bash
-https://documenter.getpostman.com/view/24342917/2s8ZDbVL15
-```
+Check Out the Below Given Link For Documentation with all API Requests, Responses, Headers & Request Body. 
 
+**POSTMAN DOCUMENTATION** : https://documenter.getpostman.com/view/24342917/2s8ZDbVL15
+
+## API References
 
 ## Authorization & Authentication API Reference 
 
