@@ -47,31 +47,76 @@ The API uses standard HTTP methods to retrieve, create, update, and delete data,
 - LOGGER
 
 
-## System Structure
 
-The REST API allows a Customer to **Signup, Signin** & **View, Create Posts and Comment on Blogs**, as well as the Administrator view all features and services provided by the API for better customer support. 
+## User Functionalities
 
-- User / Blogger
-    -
-    - Signup
-    - Signin & Signout
-    - Update all User Details
-    - View, Create, Update & Delete Posts
-    - View, Create, Update & Delete Categories
-    - Add Comments on the Post
-    - Update Posts Images
-    - Search & Sort Posts 
-    - Search Users by Name
-    - View Posts Based by Custom Pagination
-    - Delete Account
+- **Authentication Management**
+
+  - Endpoint for Sign Up
+  - Endpoint for Sign In
+  - Endpoint for Sign Out
+
+- **Profile Management**
+
+  - Endpoint for Updating User Information
+  - Endpoint for Retrieving User Information
+  - Endpoint for Deleting User Account
+
+- **Post Management**
+
+  - Endpoint for Creating Posts
+  - Endpoint for Updating Posts
+  - Endpoint for Retrieving Posts
+  - Endpoint for Deleting Posts
+  - Endpoint for Adding Comments to Posts
+  - Endpoint for Updating Post Images
+  - Endpoint for Retrieving Posts with Custom Pagination
+
+- **Category Management**
+
+  - Endpoint for Creating Categories
+  - Endpoint for Updating Categories
+  - Endpoint for Retrieving Categories
+  - Endpoint for Deleting Categories
+
+- **Searching & Sorting Posts**
+
+  - Endpoint for Searching Posts by :
+    - Title
+    - Date
+    - Category
+  - Endpoint for Sorting Posts by :
+    - Date
+    - Popularity
+
+- **User Search**
+
+  - Endpoint for Searching Users by :
+    - Name
+    
+## Administrator Functionalities    
+  
+- **Authentication Management**
+
+  - Endpoint for Sign Up Other Admin Accounts
+  - Endpoint for Sign In
+  - Endpoint for Sign Out
 
 
-- Administrator
-    -
-    - Signin & Signout
-    - SignUp other Admins 
-    - View all Users, Posts, Categories & Comments
-    - Delete Admin from Database
+- **Profile Management**
+  - Endpoint for Deleting Admin Accounts
+
+- **Post Management**
+  - Endpoint for Retrieving Posts
+  - Endpoint for Deleting Posts
+
+- **Category Management**
+  - Endpoint for Retrieving Categories
+  - Endpoint for Deleting Categories
+
+- **Comment Management**
+  - Endpoint for Retrieving Comments
+  - Endpoint for Deleting Comments
 
 
 
