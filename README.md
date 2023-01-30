@@ -152,23 +152,6 @@ Admin Login Details For Your Database
 }
 ```
 
-**IMPORTANT NOTE**
-
-
-
-- At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
-
-
-- When utilizing the PostMan software, ensure that the request includes embedded cookies as JWT authentication is implemented as a cookie-based authentication mechanism.
-
-
-- The roles have already been established within the database. Ensure that the appropriate requests are executed for both the Admin and User roles.
-
-
-- It's important to note that an Admin is also considered as a User. Only Users with Admin privileges have the ability to create additional Admins within the database.
-
-
-- The expiration time limit for JWT tokens is 20 minutes. Subsequently, a new login session is required after the 20-minute duration.
 
 
 
@@ -204,6 +187,25 @@ Swagger-UI
 ```bash
 At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
 ```
+
+## IMPORTANT NOTE
+
+
+- At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
+
+
+- When utilizing the PostMan software, ensure that the request includes embedded cookies as JWT authentication is implemented as a cookie-based authentication mechanism.
+
+
+- The roles have already been established within the database. Ensure that the appropriate requests are executed for both the Admin and User roles.
+
+
+- It's important to note that an Admin is also considered as a User. Only Users with Admin privileges have the ability to create additional Admins within the database.
+
+
+- The expiration time limit for JWT tokens is 20 minutes. Subsequently, a new login session is required after the 20-minute duration.
+
+
  
 ## ER Diagram
 
