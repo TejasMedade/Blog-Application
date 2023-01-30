@@ -188,7 +188,7 @@ Swagger-UI
 At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
 ```
 
-## IMPORTANT NOTE
+## Important Note
 
 
 - At present, Swagger does not support cookie-based authorization. The team will look into implementing it once Swagger provides the necessary features to support it.
